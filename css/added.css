@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* CSS Document */
+
+.homepageBody {
+
+    background-image: url("../img/bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.dmchapterBody {
+    background-color: #00aeef;
+    background-image: url("../img/top_head.png");
+    background-repeat: repeat-x;
+    background-size: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.normalmbody {
+    background-color: #96D6D7;
+    background-size : auto 100%;
+    background-repeat: repeat-x;
+    color:white;
+}
+
+.pan-2 {
+    width: 48%;
+}
+.pan-3 {
+    width: 31%;
+}
+.pan-4 {
+    width: 23%;
+}
+.pan-5 {
+    width: 18%;
+}
+
+.panel-home {
+	display:inline-block;
+	margin-right: 5px;
+    margin-top:5px;
+	padding: 2%;
+	background-color: #239bb7;
+	color:white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+.panel-home:hover {
+	background-color: #237692;
+    border-radius: 4px;
+}
+
+.mbtn {
+    display: inline-block;
+    text-decoration: none;
+    color: #0c5460;
+    padding:2%;
+    background-color: white;
+    border-radius: 100px;
+    font-size: large;
+
+}
+.mbtn:hover {
+    color: #fff;
+    background-color: #0c5460;
+}
+
+.twhite {
+    color:inherit;
+    text-decoration: none;
+    text-underline: none;
+
+}
+.twhite:hover {
+    color:white;
+    text-decoration: none;
+    text-underline: none;
+}
+.tblue {
+    color: #0c5460;
+}
+.logo {
+    background-color:white;
+    border-bottom: 2px #1b1e21 solid;
+    padding:15px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.topbtns {
+    background-color:#333;
+    color:white;
+    padding: 20px;
+    padding-top:25px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    display: inline;
+    text-decoration: none;
+    text-underline: none;
+    transition: 0.2s ease-in-out;
+
+}
+.topbtns:hover {
+    background-color: #29cbec;
+    text-decoration: inherit;
+    color: #0c5460;
+}
+.htbtn
+{
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+}
+.badgebg {
+    background-image: url("../Img/BADGE.png");
+}
+.textwhite {
+    color:white;
+}
+
+.lecturerow {
+    background-color: #eee;
+    color:#333;
+    font-size: 24px;
+    font-weight: lighter;
+}
+.chaptersrow {
+
+    cursor: pointer;
+    border: transparent;
+ /*   transition: 0.5s ease-in-out;*/
+}
+/*.chaptersrow:hover {
+    background-color: #2b7d84;
+    color:white;*/
+
+}
+.chapters_link{
+    color:inherit;
+    text-decoration: none;
+    text-underline: none;
+}
+
+.chapters_link:hover{
+    text-decoration: underline;
+}
