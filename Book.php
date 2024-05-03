@@ -24,7 +24,7 @@ $page->logo();
             <div class="row">
                 <div class="row">
                     <div class="col-lg-12 pl-5 pt-5 mb-3" style="padding-left: 45%;">
-                        <a href="index.php"> <img src="Img/logo.png" width="80px"class=" d-inline-block animated fadeInDown"></a>
+                        <a href="index.php"> <img src=".png" width="80px"class=" d-inline-block animated fadeInDown"></a>
 
                         <h1 class="animated fadeInRight d-inline-block" style="color: #fff;">Kardan University, <b style="color: #fff;">E-Study!</b> </h1>
                     </div>
@@ -37,13 +37,13 @@ $page->logo();
                             echo $page->getFacultyNameByID($fac_id);
                             ?></a> /
 
-                        <a class="textwhite" href="Topic.php?<?php
+                        <a class="textwhite" href="topic.php?<?php
                         echo 'fac_id='. $fac_id . "&sub_id=". $sub_id;
                         ?>"><?php
                             echo $page->getSubjectNamebyID($sub_id);
                             ?></a> /
 
-                        <a class="textwhite" href="Chapter.php?<?php
+                        <a class="textwhite" href="chapter.php?<?php
                         echo 'fac_id='. $fac_id . "&sub_id=". $sub_id . "&ch_id=" . $ch_id;
                         ?>">Chapter <?php echo $ch_id; ?></a></h5>
                     <div class="float-right animated slideInRight"><a href="files/<?php $page->getSubjectNamebyID($sub_id); echo "/chapter ". $ch_id; ?>/Book.pdf" class="btn btn-light"><i class="fa fa-arrow-down"></i> Download</a> </div>

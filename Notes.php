@@ -23,7 +23,7 @@ $page->logo();
             <div class="row">
                 <div class="row">
                     <div class="col-lg-12 pl-5 pt-5 mb-3" style="padding-left: 45%;">
-                        <a href="index.php"> <img src="Img/logo.png" width="80px"class=" d-inline-block animated fadeInDown"></a>
+                        <a href="index.php"> <img src="img/logo.png" width="80px"class=" d-inline-block animated fadeInDown"></a>
 
                         <h1 class="animated fadeInRight d-inline-block" style="color: #fff;">Kardan University, <b style="color: #fff;">E-Study!</b> </h1>
                     </div>
@@ -36,17 +36,17 @@ $page->logo();
                             echo $page->getFacultyNameByID($fac_id);
                             ?></a> /
 
-                        <a class="textwhite" href="Topic.php?<?php
+                        <a class="textwhite" href="topic.php?<?php
                         echo 'fac_id='. $fac_id . "&sub_id=". $sub_id;
                         ?>"><?php
                             echo $page->getSubjectNamebyID($sub_id);
                             ?></a> /
 
-                        <a class="textwhite" href="Chapter.php?<?php
+                        <a class="textwhite" href="chapter.php?<?php
                         echo 'fac_id='. $fac_id . "&sub_id=". $sub_id . "&ch_id=" . $ch_id;
                         ?>">Chapter <?php echo $ch_id; ?></a></h5>
 
-                    <div class="float-right"><a href="Quiz.php?<?php
+                    <div class="float-right"><a href="quiz.php?<?php
                         echo 'fac_id='. $fac_id . "&sub_id=". $sub_id;
                         ?>" class="btn btn-warning animated slideInRight"><i class="fa fa-question"></i> Take a Quiz </a> </div>
                     <div class="float-right"><button class="btn btn-light animated slideInRight mr-2" id="print"><i class="fa fa-print"></i> Print This Page</button> </div>

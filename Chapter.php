@@ -19,7 +19,7 @@ $page->logo();
         <div class="container-fluid animated slideinup">
             <div class="row">
                 <div class="col-lg-12 pl-5 pt-5 mb-3" style="padding-left: 45%;">
-                    <a href="index.php"> <img src="Img/logo.png" width="80px"class=" d-inline-block animated fadeInDown"></a>
+                    <a href="index.php"> <img src="img/logo.png" width="80px"class=" d-inline-block animated fadeInDown"></a>
                     <h1 class="animated fadeInRight d-inline-block" style="color: #fff;">Kardan University, <b style="color: #fff;">E-Study!</b> </h1>
                 </div>
             </div>
@@ -34,7 +34,7 @@ $page->logo();
                             echo "Chapter ". $ch_id . " : " . $name;
                             ?> </h3>
                         <h5 class="textwhite animated slideInLeft delay-02s">
-                            <a class="textwhite" href="Topic.php<?php
+                            <a class="textwhite" href="topic.php<?php
                             $sub_id = $_GET['sub_id'];
                             $fid = $_GET['fac_id'];
                             echo "?fac_id=".$fid. "&sub_id=". $sub_id;
@@ -74,7 +74,7 @@ $page->logo();
                 </div>
                     <?php
 
-                            echo '<div class="col-lg-4 badgebg animated flipIny delay-08s " style=""><img src="Img/badge.png" width="100%"></div>';
+                            echo '<div class="col-lg-4 badgebg animated flipIny delay-08s " style=""><img src="img/badge.png" width="100%"></div>';
 
                         }
                     }
@@ -125,7 +125,7 @@ $page->logo();
                     <button type="button" id="sum" class="btn btn-light  pan-5 m-1 animated slideInLeft delay-05s"><i class="fa vca fa-pencil"></i> Summary</button>
 
 
-                    <a href="Topic.php<?php
+                    <a href="topic.php<?php
                         echo "?fac_id=$fid&sub_id=$sub_id&ch_id=$ch_id";
                     ?>" class="btn btn-info pan-5 m-2 animated slideInLeft delay-04s"><i class="fa fa-address-book"></i> Other Chapters </a>
                         <button type="button" id="seefeedbacks" class="btn btn-warning pan-5 m-2 animated slideInLeft delay-03s"><i class="fa fa-feed"></i> See Feedbacks </button>

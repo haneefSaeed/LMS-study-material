@@ -16,7 +16,7 @@ $page->head("Register | Kardan E-Study");
         <div class="container-fluid">
             <div class="row">
                     <div class="col-lg-12 pl-5 pt-5 mb-3" style="padding-left: 45%;">
-                        <a href="index.php"> <img src="Img/logo.png" width="80px"class=" d-inline-block animated fadeInDown"></a>
+                        <a href="index.php"> <img src="img/logo.png" width="80px"class=" d-inline-block animated fadeInDown"></a>
 
                         <h1 class="animated fadeInRight d-inline-block" style="color: #fff;">Kardan University, <b style="color: #fff;">E-Study!</b> </h1>
                     </div>

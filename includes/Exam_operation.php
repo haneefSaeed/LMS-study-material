@@ -23,9 +23,9 @@ if(isset($_GET['operate'])){
             $correct_score_mark = $mark['exam_correct_mark'];
         }
         if ($q_no == 1) {
-            $recordInHistory = $coo->normalQuery( "INSERT INTO EXAM_HISTORY VALUES (his_id, $exam_id, $user_id, 0, 0, 0, 0, NOW())", 3);
+            $recordInHistory = $coo->normalQuery( "INSERT INTO exam_history VALUES (his_id, $exam_id, $user_id, 0, 0, 0, 0, NOW())", 3);
         }
-        $gettherecord = $coo->normalQuery("SELECT * FROM EXAM_HISTORY WHERE his_exam_id = $exam_id AND his_user_id = $user_id", 4);
+        $gettherecord = $coo->normalQuery("SELECT * FROM exam_history WHERE his_exam_id = $exam_id AND his_user_id = $user_id", 4);
         foreach ($gettherecord as $rec) {
             $his_id = $rec['his_id'];
             $score = $rec['his_score'];
@@ -41,9 +41,9 @@ if(isset($_GET['operate'])){
             $wrong_score_mark = $mark['exam_wrong_mark'];
         }
         if ($q_no == 1) {
-            $recordInHistory = $coo->normalQuery( "INSERT INTO EXAM_HISTORY VALUES (his_id, $exam_id, $user_id, 0, 0, 0, 0, NOW())", 7);
+            $recordInHistory = $coo->normalQuery( "INSERT INTO exam_history VALUES (his_id, $exam_id, $user_id, 0, 0, 0, 0, NOW())", 7);
         }
-        $gettherecord = $coo->normalQuery( "SELECT * FROM EXAM_HISTORY WHERE his_exam_id = $exam_id AND his_user_id = $user_id", 8);
+        $gettherecord = $coo->normalQuery( "SELECT * FROM exam_history WHERE his_exam_id = $exam_id AND his_user_id = $user_id", 8);
         foreach ($gettherecord as $rec) {
             $his_id = $rec['his_id'];
             $score = $rec['his_score'];
@@ -66,9 +66,9 @@ if(isset($_GET['operate'])){
         foreach($checkHistory as $scr){
             $score = $scr['his_score'];
         }
-        $checkRank = $coo->normalQuery("SELECT * FROM EXAM_RANK WHERE rank_user_id = $user_id",11);
+        $checkRank = $coo->normalQuery("SELECT * FROM exam_rank WHERE rank_user_id = $user_id",11);
         if($checkRank->num_rows == 0 ){
-            $insertRanking = $coo->normalQuery("INSERT INTO EXAM_RANK VALUES(rank_id, $user_id, $score, NOW())",12);
+            $insertRanking = $coo->normalQuery("INSERT INTO exam_rank VALUES(rank_id, $user_id, $score, NOW())",12);
         }else {
             foreach($checkRank as $rank){
                 $update_score = $rank['rank_score'];

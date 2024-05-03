@@ -23,7 +23,7 @@ $page->logo();
             <div class="row">
                 <div class="row">
                     <div class="col-lg-12 pl-5 pt-5 mb-3" style="padding-left: 45%;">
-                        <a href="index.php"> <img src="Img/logo.png" width="80px"class=" d-inline-block animated fadeInDown"></a>
+                        <a href="index.php"> <img src="img/logo.png" width="80px"class=" d-inline-block animated fadeInDown"></a>
 
                         <h1 class="animated fadeInRight d-inline-block" style="color: #fff;">Kardan University, <b style="color: #fff;">E-Study!</b> </h1>
                     </div>
@@ -36,13 +36,13 @@ $page->logo();
                             echo $page->getFacultyNameByID($fac_id);
                             ?></a> /
 
-                        <a class="textwhite" href="Topic.php?<?php
+                        <a class="textwhite" href="topic.php?<?php
                         echo 'fac_id='. $fac_id . "&sub_id=". $sub_id;
                         ?>"><?php
                             echo $page->getSubjectNamebyID($sub_id);
                             ?></a> /
 
-                        <a class="textwhite" href="Chapter.php?<?php
+                        <a class="textwhite" href="chapter.php?<?php
                         echo 'fac_id='. $fac_id . "&sub_id=". $sub_id . "&ch_id=" . $ch_id;
                         ?>">Chapter <?php echo $ch_id; ?></a></h5>
                     <div class="float-right animated slideInRight"><button type='button' id="read_doc" class="btn btn-success mr-2" name="<?php echo $fac_id; ?>" role="<?php echo $sub_id; ?>" style="<?php echo $ch_id; ?>"><i class="fa fa-check-circle"></i> Mark as Read</button> </div>

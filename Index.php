@@ -22,7 +22,7 @@ $page->logo();
 
         <div class="col-lg-9 p-5 mt-5" style="color: #085766;">
 
-            <img src="Img/logo.png" width="150px"  class="animated fadeInDown" style="margin-left: 15%;">
+            <img src="img/logo.png" width="150px"  class="animated fadeInDown" style="margin-left: 15%;">
             <h1 style="text-transform: uppercase;" class="animated fadeInDown delay-02s">Kardan University,</h1>
             <h1 class="animated fadeInleftBig" >Welcomes you To <b style="color: #661a5f;">E-Study!</b> </h1>
             <h3 class="animated fadeInleftBig delay-02s" style="color: #555;">Select your faculty and subject below:</h3>

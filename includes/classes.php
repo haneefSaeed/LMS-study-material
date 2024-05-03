@@ -5,7 +5,7 @@ class mysql {
     private  $con;
     public function connect()
     {
-        $this->con = new mysqli("localhost", "root", "", "Kestudy");
+        $this->con = new mysqli("localhost", "id22118379_kestudy", "N06Wmrc08!", "id22118379_kestudy");
         if($this->con){
             return $this->con;
         }
@@ -66,7 +66,7 @@ _Head;
                 
 _Menu;
         if (isset($_SESSION['Sess_user_name'])) {
-            echo '<a href="Profile.php" class="topbtns">' . $_SESSION['Sess_user_name'] . '</a> ';
+            echo '<a href="profile.php" class="topbtns">' . $_SESSION['Sess_user_name'] . '</a> ';
             echo '<a href="includes/Classes.php?id=3945" class="topbtns btn-danger">Logout</a>';
         } else {
             echo '<a href="login.php" class="topbtns">Login</a> <a href="register.php" class="topbtns">Register</a>';
@@ -152,7 +152,7 @@ _Footer;
 
     public function registerUser($id, $name, $email, $fac, $sem, $pass, $dob, $sex)
     {
-        $insert = $this->con->prepare("INSERT INTO USERS VALUES (id, ?, ?, ?, ?, ?, ?, ?,? )") or die("Error with Query!");
+        $insert = $this->con->prepare("INSERT INTO users VALUES (id, ?, ?, ?, ?, ?, ?, ?,? )") or die("Error with Query!");
         $insert->bind_param("ssisisss", $name, $pass, $id, $fac, $sem, $email, $dob, $sex);
         $exec = $insert->execute() or die ("Error Executing!");
         if ($exec) {
@@ -202,9 +202,9 @@ _Footer;
         $res = $q->get_result();
         $items = $res->num_rows;
         $percentage = $items * (100 / TABNUMBERS);
-        $ifcomp = $this->normalQuery("SELECT * FROM COMPLETED_COURSE WHERE comp_sub_id = $sub AND comp_chapter_id = $chapter AND comp_user_id = $uid", 400);
+        $ifcomp = $this->normalQuery("SELECT * FROM completed_course WHERE comp_sub_id = $sub AND comp_chapter_id = $chapter AND comp_user_id = $uid", 400);
         if($ifcomp->num_rows==0){
-            $insert= $this->normalQuery("INSERT INTO COMPLETED_COURSE VALUES (comp_id, $sub, $chapter, $uid, $percentage)", 401);
+            $insert= $this->normalQuery("INSERT INTO completed_course VALUES (comp_id, $sub, $chapter, $uid, $percentage)", 401);
         }else{
             $update = $this->normalQuery("UPDATE completed_course SET comp_percentage = $percentage WHERE comp_sub_id = $sub AND comp_chapter_id = $chapter AND comp_user_id = $uid ", 403);
         }
@@ -281,7 +281,7 @@ _Footer;
 
         if (isset($_SESSION['Sess_user_id'])) {
             $uid = $_SESSION['Sess_user_id'];
-            $read = $this->con->prepare("SELECT * FROM USER_READINGS WHERE UR_READING_SUBJECT = $sub AND UR_READING_CHAPTER = $ch AND ur_user_read = '$type' AND ur_user_id=$uid;") or die($this->con->error);
+            $read = $this->con->prepare("SELECT * FROM user_readings WHERE UR_READING_SUBJECT = $sub AND UR_READING_CHAPTER = $ch AND ur_user_read = '$type' AND ur_user_id=$uid;") or die($this->con->error);
             $read->execute();
             $res = $read->get_result();
             if ($res->num_rows > 0) {
@@ -309,7 +309,7 @@ _Footer;
     }
     public function FacultyTabs()
     {
-        $q = $this->con->prepare("SELECT * FROM FACULTY");
+        $q = $this->con->prepare("SELECT * FROM faculty");
         $q->execute();
         $facs = $q->get_result();
         foreach ($facs as $fac) {
@@ -512,7 +512,7 @@ _Blankrow;
         $q_id = $question['quest_id'];
         echo '<h4>Question '.$quest_no.'. '.$qsn.'</h4>';
     }
-    $getOptions = $this->normalQuery("SELECT * FROM EXAM_OPTIONS WHERE option_quest_id = $quest_no", 22);
+    $getOptions = $this->normalQuery("SELECT * FROM exam_options WHERE option_quest_id = $quest_no", 22);
     echo '<form method="post" class="mt-5" action ="includes/exam_operation.php?operate=true&fac_id='.$fac.'&sub_id='.$sub.'&ex_id='.$exid.'&q='.$quest_no.'&total='.$total.'&q_id='.$quest_no.'" ><tr>';
     foreach($getOptions as $opt){
         $option = $opt['option_option'];
@@ -584,7 +584,7 @@ echo "<tr><td colspan='7' class='text-center'>No Exams Attemepted Yet!</td></tr>
 }
         foreach ($q as $history) {
             $ex_id = $history['his_exam_id'];
-            $fetch_exid = $this->normalQuery("SELECT * FROM EXAM WHERE exam_id = $ex_id");
+            $fetch_exid = $this->normalQuery("SELECT * FROM exam WHERE exam_id = $ex_id");
             foreach ($fetch_exid as $name) {
                 $ex_name = $name['exam_Name'];
                 $ex_q = $name['exam_total_questions'];
@@ -629,7 +629,7 @@ _CompleteData;
                     foreach ($res as $name) {
                         $sub_name = $name['sub_name'];
                     };
-                    $ch = $this->normalQuery("SELECT * FROM Chapter WHERE Ch_id = $ch_id");
+                    $ch = $this->normalQuery("SELECT * FROM chapter WHERE Ch_id = $ch_id");
                     foreach ($ch as $name) {
                         $ch_no = $name['ch_no'];
                         $ch_name = $name['ch_title'];
